@@ -11,7 +11,7 @@ sys.setdefaultencoding('utf8')
 import pandas as pd
 import xlwt
 from impala.dbapi import connect
-conn = connect(host='10.240.20.22', port=21050, user='lin.y', password='1q2w3e4r')
+conn = connect(host='10.101.10', port=, user='', password='')
 cur = conn.cursor(user='lin.y')
 
 def load_data(oday, xday, starday,realday,lastday, reason_end ,rate):
@@ -180,7 +180,7 @@ def write_excel(data):
 
 if __name__ == "__main__":
     # 查询数据
-    sql_sal = 'select distinct * from bi_test.ylin_inventory_roll_all;'
+    sql_sal = 'select distinct * from test.table;'
     sql_src = 'select distinct brand_name,' \
               'catname_one,' \
               '(case when catname_two  like "%包%" then "包" else catname_two  end) as catname_two,' \
