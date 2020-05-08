@@ -16,7 +16,7 @@ import traceback
 import pandas as pd
 import xlwt
 from impala.dbapi import connect
-conn = connect(host='impala.bjds.belle.lan', port=21051, auth_mechanism='LDAP', user='lin.y', password='061038ly')
+conn = connect(host='0.0.0.0', port=00001, auth_mechanism='LDAP', user='test', password='test')
 cur = conn.cursor(user='lin.y')
 
 def Hive_data(Monday, Sunday, Monday_after, Sunday_after):
